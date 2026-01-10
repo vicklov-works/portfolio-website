@@ -1,0 +1,250 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Body & Background */
+body {
+    color: #f0f0f0;
+    background: url('dark-background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    line-height: 1.6;
+}
+
+/* Navigation */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #00ffff; /* bright cyan */
+}
+
+/* Logo Styling */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 700;
+    cursor: default;
+}
+
+.logo-initials {
+    font-size: 2rem;
+    color: #00ffff; /* Cyan accent */
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 2px;
+}
+
+.logo-name {
+    font-size: 1.2rem;
+    color: #ffeb3b; /* Yellow accent */
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: #f0f0f0;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ffeb3b; /* yellow accent */
+}
+
+/* Home Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: rgba(0,0,0,0.6);
+    padding: 0 2rem;
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    color: #00ffff;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #e0e0e0;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background-color: #ffeb3b;
+    color: #000;
+    font-weight: 600;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #ffd600;
+}
+
+/* Sections */
+section {
+    padding: 5rem 2rem;
+    background: rgba(0,0,0,0.6)
+}
+
+h2 {
+    font-size: 2rem;
+    color: #00ffff;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* About Section */
+.about p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    color: #e0e0e0;
+    line-height: 1.8;
+}
+
+/* Services Section */
+.services .service-cards {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.services .card {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 10px;
+    width: 280px;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.services .card h3 {
+    color: #ffeb3b;
+    margin-bottom: 1rem;
+}
+
+.services .card p {
+    color: #f0f0f0;
+}
+
+.services .card:hover {
+    transform: translateY(-10px);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Portfolio Section */
+.portfolio .portfolio-items {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.portfolio .portfolio-item {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 1.5rem;
+    border-radius: 10px;
+    width: 250px;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.portfolio .portfolio-item h4 {
+    color: #ffeb3b;
+    margin-bottom: 0.5rem;
+}
+
+.portfolio .portfolio-item p {
+    color: #f0f0f0;
+}
+
+.portfolio .portfolio-item:hover {
+    transform: translateY(-8px);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Contact Section */
+.contact ul {
+    list-style: none;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact ul li {
+    margin: 0.8rem 0;
+    font-size: 1.1rem;
+    color: #e0e0e0;
+}
+
+.contact ul li a {
+    color: #00ffff;
+    text-decoration: none;
+}
+
+.contact ul li a:hover {
+    color: #ffeb3b;
+}
+
+/* Footer */
+footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    padding: 1.5rem 0;
+    color: #f0f0f0;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .services .service-cards,
+    .portfolio .portfolio-items {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+/* Fade-in animation for sections */
+section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+section.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
