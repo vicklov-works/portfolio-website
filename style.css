@@ -9,7 +9,9 @@
 /* Body & Background */
 body {
     color: #f0f0f0;
-    background: url('dark-background.jpg') no-repeat center center fixed;
+     background:
+        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3)),
+        url('dark-background.jpg') center/cover no-repeat;
     background-size: cover;
     line-height: 1.6;
 }
@@ -71,6 +73,28 @@ body {
 .nav-links a:hover {
     color: #ffeb3b; /* yellow accent */
 }
+
+/* Hide mobile toggle by default */
+.nav-toggle {
+    display: none;
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.btn {
+    background-color: #d4af37;
+    color: #121212;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+}
+.btn:hover {
+    background-color: #bfa235;
+}
+
 
 /* Home Section */
 .hero {
@@ -248,3 +272,34 @@ section.fade-in {
     transform: translateY(0);
 }
 
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #fff;
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem 0;
+        display: none;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 1rem 0;
+    }
+}
