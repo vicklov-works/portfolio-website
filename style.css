@@ -294,7 +294,8 @@ section.fade-in {
         text-align: center;
         padding: 1.5rem 0;
         display: none;
-        color: #FFFFFF;
+        color: #000000;
+        font-weight: bold;
     }
 
     .nav-links.active {
