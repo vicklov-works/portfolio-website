@@ -289,11 +289,12 @@ section.fade-in {
         top: 100%;
         left: 0;
         right: 0;
-        background: #fff;
+        background: #D3D3D3;
         flex-direction: column;
         text-align: center;
         padding: 1.5rem 0;
         display: none;
+        color: #FFFFFF;
     }
 
     .nav-links.active {
